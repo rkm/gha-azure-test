@@ -20,3 +20,5 @@ View in portal under Active Directory -> App Registrations -> All applications.
 
 In GitHub repo. Settings -> Secrets -> Add secret. Create a new secret named
 `AZURE_CREDENTIALS` and paste the JSON from above.
+
+Be careful of sensitive output from `az` command being stored in GHA logs...
