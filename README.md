@@ -12,7 +12,7 @@ Demo of connecting GitHub Actions with the Azure CLI.
         --role Contributor \
         --scopes /subscriptions/{subscription-id}
     ```
-    This returns a JSON object with required credentials.
+    This returns a JSON object with the required credentials.
 -   Provide this to GitHub Actions via a repository secret. In GitHub, go to the
     repository Settings -> Secrets -> Add secret. Create a new secret named
     `AZURE_CREDENTIALS` and paste the JSON from the above command.
