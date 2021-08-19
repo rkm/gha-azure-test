@@ -1,0 +1,20 @@
+name: main
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: azure/login@v1.1
+        with:
+          # https://github.com/Azure/login#configure-deployment-credentials
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Test Azure CLI
+        run: az vm list
