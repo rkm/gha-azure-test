@@ -1,6 +1,6 @@
 # gha-azure-test
 
-Test GitHub Actions with Azure CLI.
+Demo of connecting GitHub Actions with the Azure CLI.
 
 ## Setup
 
