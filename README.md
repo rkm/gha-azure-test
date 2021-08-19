@@ -7,9 +7,9 @@ Test GitHub Actions with Azure CLI.
 -   https://github.com/Azure/login#configure-deployment-credentials
     ```console
     $ az ad sp create-for-rbac \
-        --name "{sp-name}" \
-        --sdk-auth \
-        --role contributor \
+        --name "gha-azure-test" \
+        --sdk-auth true \
+        --role Contributor \
         --scopes /subscriptions/{subscription-id}
     ```
     This returns JSON object with required credentials.
@@ -19,3 +19,5 @@ Test GitHub Actions with Azure CLI.
 -   View all created credentials in portal under Active Directory -> App
     Registrations -> All applications.
 -   Be careful of sensitive output from `az` command being stored in GHA logs...
+-   The `--scopes` argument above can be restricted further to a specific
+    resource group or resource (e.g. to allow start/stop of a specific VM only)
