@@ -21,3 +21,7 @@ Demo of connecting GitHub Actions with the Azure CLI.
 -   Be careful of sensitive output from `az` command being stored in GHA logs...
 -   The `--scopes` argument above can be restricted further to a specific
     resource group or resource (e.g. to allow start/stop of a specific VM only)
+-   For the extra-paranoid:
+    ```console
+    $ az logout && az cache purge && az account clear
+    ```
