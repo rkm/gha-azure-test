@@ -20,7 +20,12 @@ Demo of connecting GitHub Actions with the Azure CLI.
 ## Notes
 
 -   View all created credentials in the Azure Portal under Active Directory ->
-    App Registrations -> All applications.
+    App Registrations -> All applications. Alternatively under Subscription ->
+    Access control (IAM) -> Role assignments.
+    -   _NOTE_ Depending on how you delete the credentials, an orphaned identity
+        might be left in the Role assignments list. See
+        [here](https://purple.telstra.com/blog/removing-unknown-azure-rbac-role-assignments-with-powershell)
+        for details on how to clean these up.
 -   Be careful of sensitive output from `az` commands being stored in GHA logs
 -   The `--scopes` argument above can be restricted further to a specific
     resource group or resource (e.g. to allow start/stop of a specific VM only)
