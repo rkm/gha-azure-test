@@ -17,4 +17,4 @@ jobs:
           # https://github.com/Azure/login#configure-deployment-credentials
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Test Azure CLI
-        run: az vm list
+        run: az vm list --output table
