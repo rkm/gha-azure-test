@@ -13,3 +13,10 @@ $ az ad sp create-for-rbac \
     --role contributor \
     --scopes /subscriptions/{subscription-id}
 ```
+
+Returns JSON object with required credentials.
+
+View in portal under Active Directory -> App Registrations -> All applications.
+
+In GitHub repo. Settings -> Secrets -> Add secret. Create a new secret named
+`AZURE_CREDENTIALS` and paste the JSON from above.
